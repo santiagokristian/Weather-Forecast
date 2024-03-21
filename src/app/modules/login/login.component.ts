@@ -2,7 +2,7 @@ import { LoginButtonComponent } from './components/login-button/login-button.com
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-login',
+  selector: 'weather-login',
   standalone: true,
   imports: [LoginButtonComponent],
   templateUrl: './login.component.html',

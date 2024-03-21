@@ -1,9 +1,9 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-home',
+  selector: 'weather-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

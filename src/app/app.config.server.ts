@@ -11,7 +11,7 @@ const serverConfig: ApplicationConfig = {
       useValue: {},
     },
     { provide: AuthConfigService, 
-      useValue: {} as any },
+      useValue: {}  },
   ]
 };
 

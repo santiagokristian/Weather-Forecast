@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 @Component({
-  selector: 'app-root',
+  selector: 'weather-app-root',
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',

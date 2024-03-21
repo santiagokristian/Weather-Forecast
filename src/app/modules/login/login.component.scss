@@ -1,0 +1,26 @@
+.login-cont {
+  padding-top: 10%;
+  max-width: 39rem;
+  max-height: 55rem;
+  .card {
+    margin-top: 10%;
+    .card-title {
+      text-align: center;
+    }
+    .sub-title{
+        text-align: center;
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 1rem 3rem;
+    }
+    @media (min-width: 768px) {
+      .login-btn-cont {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+  }
+}

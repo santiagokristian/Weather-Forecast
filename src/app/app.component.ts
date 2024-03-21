@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { Component, OnDestroy } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -8,6 +8,19 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'Weather-Forecast';
+export class AppComponent implements OnDestroy {
+  private routerSubscription: Subscription;
+  backgroundBoolean: boolean = true;
+  constructor(private router: Router) {
+    this.routerSubscription = this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        this.backgroundBoolean = !e.url.includes('home');
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.routerSubscription.unsubscribe();
+  }
+
 }

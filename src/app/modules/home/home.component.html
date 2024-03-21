@@ -1,5 +1,2 @@
 <weather-header />
-<ul *ngIf="auth.user$ | async as user">
-  <li>{{ user.name }}</li>
-  <li>https://github.com/{{ user.nickname }}</li>
-</ul>
+<router-outlet />

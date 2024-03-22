@@ -1,4 +1,10 @@
-<div class="weather-container" [class.landing]="backgroundBoolean">
-  <router-outlet />
+<div class="container" *ngIf="auth.isLoading$ | async; else loaded">
+  <div class="d-flex  align-items-center justify-content-center spinner-container">
+    <div class="spinner-border"></div>
+  </div>
 </div>
- 
+<ng-template #loaded>
+  <div class="weather-container" [class.landing]="backgroundBoolean">
+    <router-outlet />
+  </div>
+</ng-template>

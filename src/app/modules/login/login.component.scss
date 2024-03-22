@@ -6,6 +6,10 @@
     margin-top: 10%;
     .card-title {
       text-align: center;
+      .logo{
+        height: 5rem;
+        background-image: url('../../../assets/images/weather-logo.png') ;
+      }
     }
     .sub-title{
         text-align: center;

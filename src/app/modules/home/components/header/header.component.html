@@ -1,0 +1,24 @@
+<header class="py-3 mb-3 border-bottom">
+  <div className="container-fluid d-grid gap-3 align-items-center"
+    style="grid-template-columns: 1fr 1fr; display: grid;">
+    <div class="header-logo h2 px-5 d-flex align-items-center">
+      <img src="/assets/images/weather-logo.png" class="logo" alt="..." />
+      Weather Forecast
+    </div>
+    <div class="px-5 align-self-center d-flex flex-row-reverse">
+      <div ngbDropdown class="dropdown show" *ngIf="auth.user$ | async as user">
+        <a ngbDropdownToggle class="d-block link-dark text-decoration-none dropdown-toggle" role="button"
+          id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img [src]="user.picture" alt="mdo" width="32" height="32" class="rounded-circle">
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu text-small shadow" aria-labelledby="dropdownMenuLink">
+          <a ngbDropdownItem class='dropdown-item'>{{user.name}}</a>
+          <a ngbDropdownItem class='dropdown-item'>https://github.com/{{user.nickname}}</a>
+          <hr ngbDropdownItem class="dropdown-divider" />
+          <a ngbDropdownItem class='dropdown-item' (click)="logout()">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>

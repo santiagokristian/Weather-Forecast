@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
+## Quickstart
+
+1. Clone the Repository.
+2. Run the npm install.
+3. After Installation run ng serve. *make sure you are on http://localhost:4200 upon running if not change the redirectUri on the environment.ts file.
+4. Check the UI and thank you for your suggestions.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

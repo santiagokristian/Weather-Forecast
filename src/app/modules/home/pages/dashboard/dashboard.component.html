@@ -1,5 +1,5 @@
 <div class="container col-md-6 col-sm-10">
-  <div class="h3"> Check City Weathers</div>
+  <div class="h3 align-self-center"> Check City Weathers</div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="input-group">
       <input type="text" formControlName="city" class="form-control" placeholder="Ex: London"
@@ -19,4 +19,9 @@
     </div>
     }
   </form>
+  @if(searchResults){
+    <div class="align-self-center"> 
+        <button class="btn btn-primary" (click)="onDisplay()">Display Weather</button>
+    </div>
+    }
 </div>

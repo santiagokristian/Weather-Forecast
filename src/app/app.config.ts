@@ -4,7 +4,9 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideAuth0 } from '@auth0/auth0-angular';
 import { environment } from '../environments/environment';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
+import { provideStore } from '@ngrx/store';
+import { appReducer } from './store/app.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,5 +17,7 @@ export const appConfig: ApplicationConfig = {
         audience: environment.auth0Settings.audience,
         redirect_uri: environment.auth0Settings.redirectUri
       }
-    }), provideHttpClient()]
+    }), provideHttpClient(),
+    provideStore(appReducer)
+  ]
 };

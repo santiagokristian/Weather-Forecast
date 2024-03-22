@@ -1,5 +1,11 @@
-.control-error{
-    font-size: 12px;
-    margin-left: 2px;
-    color: red;
+.control-error {
+  font-size: 12px;
+  margin-left: 2px;
+  color: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }

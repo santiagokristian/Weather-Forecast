@@ -13,8 +13,9 @@
         </a>
         <div ngbDropdownMenu class="dropdown-menu text-small shadow" aria-labelledby="dropdownMenuLink">
           <a ngbDropdownItem class='dropdown-item'>{{user.name}}</a>
+          <a ngbDropdownItem class='dropdown-item'>https://github.com/{{user.nickname}}</a>
           <hr ngbDropdownItem class="dropdown-divider" />
-          <a ngbDropdownItem class='dropdown-item'>Logout</a>
+          <a ngbDropdownItem class='dropdown-item' (click)="logout()">Logout</a>
         </div>
       </div>
     </div>

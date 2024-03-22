@@ -10,4 +10,11 @@ export class HeaderComponent {
   constructor(public auth: AuthService) {
 
   }
+  logout() {
+    this.auth.logout({
+      logoutParams: {
+        returnTo: window.location.origin
+      }
+    });
+  }
 }

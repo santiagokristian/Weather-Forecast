@@ -10,14 +10,16 @@ import { appReducer } from './store/app.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes), provideAuth0({
+    provideRouter(routes),
+    provideAuth0({
       domain: environment.auth0Settings.domain,
       clientId: environment.auth0Settings.clientId,
       authorizationParams: {
         audience: environment.auth0Settings.audience,
         redirect_uri: environment.auth0Settings.redirectUri
       }
-    }), provideHttpClient(),
+    }),
+    provideHttpClient(),
     provideStore(appReducer)
   ]
 };

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'weather-app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, AsyncPipe,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeatherDisplayComponent } from './weather-display.component';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from '../../../../store/app.reducer';
 
 describe('WeatherDisplayComponent', () => {
   let component: WeatherDisplayComponent;
@@ -8,7 +10,8 @@ describe('WeatherDisplayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WeatherDisplayComponent]
+      declarations: [WeatherDisplayComponent],
+      imports: [StoreModule.forRoot(appReducer)]
     })
     .compileComponents();
     

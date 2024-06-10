@@ -5,7 +5,7 @@
       <input type="text" formControlName="city" class="form-control" placeholder="Ex: London"
         [ngClass]="{ 'is-invalid': submitted && form.controls['city'].errors}" />
       <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="submit" [disabled]="loading">Search</button>
+        <button class="btn btn-outline-secondary" type="submit" [disabled]="loading" id="search-btn">Search</button>
       </div>
     </div>
     @if (submitted && form.controls['city'].errors) {
@@ -21,7 +21,7 @@
   </form>
   @if(searchResults){
     <div class="align-self-center"> 
-        <button class="btn btn-primary" (click)="onDisplay()">Display Weather</button>
+        <button class="btn btn-primary" (click)="onDisplay()" id="display-btn">Display Weather</button>
     </div>
     }
 </div>

@@ -19,7 +19,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let details of weather.weather">
+          @for (details of weather.weather; track $index) {
+          <tr>
             <td>{{details.date | date: 'MM/dd/yyyy'}}</td>
             <td>{{details.temp}}</td>
             <td class="d-none d-sm-table-cell">{{details.description}}</td>
@@ -27,6 +28,8 @@
             <td class="d-none d-sm-table-cell">{{details.pressure}}</td>
             <td class="d-none d-sm-table-cell">{{details.humidity}}</td>
           </tr>
+          }
+
         </tbody>
       </table>
     </div>
